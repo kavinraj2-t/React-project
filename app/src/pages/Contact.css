@@ -1,0 +1,145 @@
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding-top: 80px; 
+}
+
+.contact-desc {
+  width: 100vw;
+  min-height: 300px;
+  background: url("https://img.freepik.com/free-photo/global-logistics-transportation-network_23-2151989598.jpg?semt=ais_hybrid&w=740&q=80")
+    no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  border-bottom: 4px solid #0d2a4a;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f9fb;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.contact-desc-large {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #003366;
+}
+.headoffice
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+.contact-desc-small {
+  font-size: 25px;
+  opacity: 0.9;
+  color: #003366;
+}
+
+.contact-container {
+  background: #ffffff;
+  width: 85%;
+  max-width: 750px;
+  margin: -40px auto 50px auto;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.18);
+  border-top: 6px solid #003366;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 28px;
+  color: #003366;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #d7dfe7;
+  border-radius: 10px;
+  background-color: #f8fafc;
+  font-size: 15px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: #003366;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 51, 102, 0.3);
+  outline: none;
+}
+
+.contact-textarea {
+  height: 140px;
+}
+
+.contact-btn {
+  background: #003366;
+  color: white;
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.contact-btn:hover {
+  background: #0b487a;
+  transform: translateY(-2px);
+}
+
+.Addressdiv {
+  width: 100vw;
+  background: #0a2a4e;
+  padding: 35px 20px;
+  color: white;
+  text-align: left;
+  border-top: 5px solid #0b487a;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.Addressdiv p {
+  max-width: 700px;
+}
+
+footer {
+  width: 100vw;
+  background: #000c1c;
+  color: white;
+  text-align: left;
+  padding: 25px 0;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+@media (max-width: 768px) {
+  .contact-desc-large {
+    font-size: 26px;
+  }
+
+  .contact-container {
+    width: 92%;
+    padding: 25px;
+  }
+}

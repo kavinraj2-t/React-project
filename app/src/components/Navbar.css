@@ -1,0 +1,272 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: transparent;
+  backdrop-filter: none;
+
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 15px 0;
+  
+  overflow: visible;
+}
+
+.navbar-scrolled {
+  padding: 8px 0;
+
+  background: rgba(13, 42, 74, 0.75); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  transition: height 0.3s ease;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #ff6b35;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.navbar-scrolled .logo img {
+  height: 42px;
+}
+
+.navbar-scrolled .logo span {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #ff6b35;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 5px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff6b35;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.navbar-scrolled .nav-links a {
+  color: #ffffff;
+}
+
+.navbar-scrolled .nav-links a::after {
+  background-color: #ffffff;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-title {
+  background: none;
+  border: none;
+  color: #ff6b35;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 5px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.navbar-scrolled .dropdown-title {
+  color: #fff;
+}
+
+.arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown.active .arrow {
+  transform: rotate(180deg);
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+
+  background: #ffffff;
+  min-width: 240px;
+  border-radius: 8px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-15px);
+  transition: all 0.3s ease;
+
+  list-style: none;
+  padding: 10px 0;
+  margin: 15px 0 0 0;
+  border-top: 3px solid #0066cc;
+
+}
+
+.navbar-scrolled .dropdown-menu a {
+  color: #333 !important; 
+}
+
+.navbar-scrolled .dropdown-menu a:hover {
+  color: #0066cc;
+  background-color: #f8f9fa;
+}
+
+.dropdown.active .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+.navbar-scrolled .dropdown-menu {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.dropdown-menu a {
+  display: block;
+  padding: 13px 25px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-menu a::after {
+  display: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+  color: #0066cc;
+  border-left-color: #0066cc;
+  padding-left: 30px;
+}
+
+.nav-links a.active {
+  color: #ff6b35;
+}
+
+@media (max-width: 1200px) {
+  .navbar-inner {
+    padding: 0 30px;
+  }
+  .nav-links {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-inner {
+    padding: 0 25px;
+  }
+  .nav-links {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .navbar-inner {
+    padding: 0 20px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .logo span {
+    font-size: 15px;
+    letter-spacing: 0.8px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 35px;
+  }
+
+  .logo span {
+    font-size: 13px;
+  }
+}
